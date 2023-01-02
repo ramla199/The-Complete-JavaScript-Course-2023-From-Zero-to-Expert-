@@ -23,3 +23,26 @@ console.log(checkWinner(avgDolhins,avgKoalas))
 // 5. Ignoredrawsthistime
 // Test data:
 // § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+// Coding Challenge #2
+// Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+// Your tasks:
+// 1. Writeafunction'calcTip'thattakesanybillvalueasaninputandreturns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100
+
+const calcTip = bill => {
+    let tip = bill > 50 && bill < 300 ? bill * 0.15 : 0.2 * bill;
+    return  tip;
+}
+console.log(calcTip(100));
+
+// 2. And now let's use arrays! So create an array 'bills' containing the test data below
+const bills = [125,555,44];
+
+// 3. Createanarray'tips'containingthetipvalueforeachbill,calculatedfrom the function you created before
+const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[bills.length - 1])];
+
+// 4. Bonus:Createanarray'total'containingthetotalvalues,sothebill+tip
+const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]]
+
+// Test data: 125, 555 and 44
+console.log(bills + "\n" + tips + "\n" + total)
