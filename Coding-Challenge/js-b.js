@@ -13,10 +13,7 @@ let avgKoalas =  calcAverage(65,54,49);  // Koalas
 // console.log(avgDolhins, avgKoalas);
 // 3. Createafunction'checkWinner'thattakestheaveragescoreofeachteam
 // as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)"
-const checkWinner = (avgDolhins , avgKoalas) => avgDolhins >= 2 *  avgKoalas ? `Dolphins  wins (${avgDolhins.toFixed(2)} vs. ${avgKoalas.toFixed(2)})` : avgKoalas >= 2 * avgDolhins ? `koalas wins ${avgKoalas.toFixed(2)} vs. ${avgDolhins.toFixed(2)}` : ` no team wins`
-
-
-
+const checkWinner = (avgDolhins , avgKoalas) => avgDolhins > avgKoalas ? `Dolphins  wins (${avgDolhins.toFixed(2)} vs. ${avgKoalas.toFixed(2)})` : `koalas wins ${avgKoalas.toFixed(2)} vs. ${avgDolhins.toFixed(2)}`
  
 console.log(checkWinner(avgDolhins , avgKoalas))
 // 4. Usethe'checkWinner'functiontodeterminethewinnerforbothData1and Data 2
@@ -49,12 +46,3 @@ const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]]
 
 // Test data: 125, 555 and 44
 console.log(bills + "\n" + tips + "\n" + total)
-
-// Coding Challenge #3
-// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
-// Your tasks:
-// 1. Foreachofthem,createanobjectwithpropertiesfortheirfullname,mass,and height (Mark Miller and John Smith)
-// 2. Createa'calcBMI'methodoneachobjecttocalculatetheBMI(thesame method on both objects). Store the BMI value to a property, and also return it from the method
-// 3. LogtotheconsolewhohasthehigherBMI,togetherwiththefullnameandthe respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
-// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
-
