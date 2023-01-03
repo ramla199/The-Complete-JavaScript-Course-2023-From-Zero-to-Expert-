@@ -13,7 +13,10 @@ let avgKoalas =  calcAverage(65,54,49);  // Koalas
 // console.log(avgDolhins, avgKoalas);
 // 3. Createafunction'checkWinner'thattakestheaveragescoreofeachteam
 // as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)"
-const checkWinner = (avgDolhins , avgKoalas) => avgDolhins > avgKoalas ? `Dolphins  wins (${avgDolhins.toFixed(2)} vs. ${avgKoalas.toFixed(2)})` : `koalas wins ${avgKoalas.toFixed(2)} vs. ${avgDolhins.toFixed(2)}`
+const checkWinner = (avgDolhins , avgKoalas) => avgDolhins >= 2 *  avgKoalas ? `Dolphins  wins (${avgDolhins.toFixed(2)} vs. ${avgKoalas.toFixed(2)})` : avgKoalas >= 2 * avgDolhins ? `koalas wins ${avgKoalas.toFixed(2)} vs. ${avgDolhins.toFixed(2)}` : ` no team wins`
+
+
+
  
 console.log(checkWinner(avgDolhins , avgKoalas))
 // 4. Usethe'checkWinner'functiontodeterminethewinnerforbothData1and Data 2
