@@ -56,7 +56,7 @@ console.log(describePopulation('India', 5467))
 
 // LECTURE: Introduction to Arrays
 // 1. Createanarraycontaining4populationvaluesof4countriesofyourchoice. You may use the values you have been using previously. Store this array into a variable called 'populations'
-// const populations = [2340, 4569, 5543,3245];
+const populations = [2340, 4569, 5543,3245];
 // 2. Logtotheconsolewhetherthearrayhas4elementsornot(trueorfalse)
 console.log(populations.length >= 4);
 // 3. Createanarraycalled'percentages'containingthepercentagesofthe
@@ -111,9 +111,16 @@ console.log(myCountry['describe']());
 //   The Complete JavaScript Course 16
 // LECTURE: Looping Arrays, Breaking and Continuing
 // 1. Let'sbringbackthe'populations'arrayfromapreviousassignment
+// const populations = [2340, 4569, 5543,3245];
 // 2. Useaforlooptocomputeanarraycalled'percentages2'containingthe
 // percentages of the world population for the 4 population values. Use the
 // function 'percentageOfWorld1' that you created earlier
+let percentages2=[];
+// console.log(percentageOfWorld1());
+for(let i=0; i <  populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]));
+} 
+console.log(percentages2);
 // 3. Confirmthat'percentages2'containsexactlythesamevaluesasthe
 // 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is
 
