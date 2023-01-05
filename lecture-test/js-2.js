@@ -56,7 +56,7 @@ console.log(describePopulation('India', 5467))
 
 // LECTURE: Introduction to Arrays
 // 1. Createanarraycontaining4populationvaluesof4countriesofyourchoice. You may use the values you have been using previously. Store this array into a variable called 'populations'
-const populations = [2340, 4569, 5543,3245];
+// const populations = [2340, 4569, 5543,3245];
 // 2. Logtotheconsolewhetherthearrayhas4elementsornot(trueorfalse)
 console.log(populations.length >= 4);
 // 3. Createanarraycalled'percentages'containingthepercentagesofthe
