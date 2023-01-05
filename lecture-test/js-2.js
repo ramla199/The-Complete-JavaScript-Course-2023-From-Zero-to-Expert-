@@ -83,24 +83,32 @@ const myCountry = {
     capital: 'Addis Ababa',
     language: 'Amharic',
     population: 7,
-    neighbouring: ['Somalia','Kenya', 'Sudan']
+    neighbouring: ['Somalia','Kenya', 'Sudan'],
+    describe: function() {
+        console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbouring.length} neighbouring countries and a capital called ${this.capital}.`);
+    },
+    checkIsland: function() {
+        this.isIsland = this.neighbouring.length <= 0 ? true : false;
+    }
 }
 // LECTURE: Dot vs. Bracket Notation
 // 1. Usingtheobjectfromthepreviousassignment,logastringlikethistothe console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
-console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbouring.length} neighbouring countries and a capital called ${myCountry.capital}.`);
+//console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbouring.length} neighbouring countries and a capital called ${myCountry.capital}.`);
 // 2. Increasethecountry'spopulationbytwomillionusingdotnotation,andthen decrease it by two million using brackets notation.
 myCountry.population += 2;
-console.log(myCountry.population);
+console.log(myCountry['describe']());
 // LECTURE: Object Methods
 // 1. Addamethodcalled'describe'tothe'myCountry'object.Thismethod will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
-
 // 2. Callthe'describe'method
 // 3. Addamethodcalled'checkIsland'tothe'myCountry'object.This
 // method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
+
 // LECTURE: Iteration: The for Loop
 // 1. Thereareelectionsinyourcountry!Inasmalltown,thereareonly50voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'
+// for(let voter = 0; voter <= 50; voter++){
+    // console.log(`Voter number ${voter} is currently voting`);
+// }
 //   The Complete JavaScript Course 16
-
 // LECTURE: Looping Arrays, Breaking and Continuing
 // 1. Let'sbringbackthe'populations'arrayfromapreviousassignment
 // 2. Useaforlooptocomputeanarraycalled'percentages2'containingthe
