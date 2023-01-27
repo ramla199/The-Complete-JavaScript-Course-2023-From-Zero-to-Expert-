@@ -122,7 +122,8 @@ for(let i=0; i <  populations.length; i++) {
 } 
 console.log(percentages2);
 // 3. Confirmthat'percentages2'containsexactlythesamevaluesasthe
-// 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is
+// 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution isf
+
 // LECTURE: Looping Backwards and Loops in Loops
 // 1. Storethisarrayofarraysintoavariablecalled'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
 // 2. Logonlytheneighbouringcountriestotheconsole,onebyone,nottheentire arrays. Log a string like 'Neighbour: Canada' for each country
